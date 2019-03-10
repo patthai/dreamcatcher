@@ -37,6 +37,7 @@
         
         		<form id="post_data">
         			<div style="display: none;">
+        			<input name="user_name_post" id="user_name" type="text" value="">
         			<input name="lastnight_dream_post" id="lastnight_dream" type="text" value="">
 					<input name="dream_feeling_post" id="dream_feeling" type="text" value="">
 					<input name="day_feeling_post" id="day_feeling" type="text" value="">
@@ -70,6 +71,7 @@
   		document.getElementById("status").innerHTML  = "Submitting";
     	}
     	
+    	document.getElementById("user_name").value = localStorage.getItem("user_name_answer");
     	document.getElementById("lastnight_dream").value = localStorage.getItem("lastnight_dream_answer");
     	document.getElementById("dream_feeling").value = localStorage.getItem("dream_feeling_answer");
     	document.getElementById("day_feeling").value = localStorage.getItem("day_feeling_answer");

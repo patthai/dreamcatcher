@@ -42,7 +42,7 @@
       <center><h4 class="animated fadeInUp" style="-webkit-animation-delay: 0.6s;">Welcome</h4></center>
       <div class="animated fadeInUp " style="-webkit-animation-delay: 0.9s;">
       	<div class="row center">
-        <div class="animated infinite pulse"><a onclick="next()" href="question_1.html"  id="download-button" class="btn-large waves-effect waves-light orange">Begin</a></div>
+        <div class="animated infinite pulse"><a onclick="next()" href="question_0.html"  id="download-button" class="btn-large waves-effect waves-light orange">Begin</a></div>
       	</div>
       </div>
      
@@ -65,6 +65,7 @@
     	
     	function next()
     	{
+    		localStorage.setItem("user_name_answer","");
     		localStorage.setItem("lastnight_dream_answer","");
     		localStorage.setItem("dream_feeling_answer","");
     		localStorage.setItem("day_feeling_answer","");
