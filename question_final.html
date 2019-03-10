@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="materialize/css/animate.css" >
+	
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      <script src="js/post_to_sheet.js"></script>
+      
+
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+  	
+    <div class="container">
+      
+<center><a href ="index.html"><img src = "image/logo.png" width = "120px"></a></center>
+    <div class="container">
+      
+      
+      
+      <center><h3 class="animated fadeInUp" style="-webkit-animation-delay: 0.3s;" id ="status">Are you ready to submit your dream?</h3></center>
+      <div class="animated fadeInUp " style="-webkit-animation-delay: 0.9s;">
+      	<div class="row center">
+        					
+        					
+        
+        		<form id="post_data">
+        			<div style="display: none;">
+        			<input name="lastnight_dream_post" id="lastnight_dream" type="text" value="">
+					<input name="dream_feeling_post" id="dream_feeling" type="text" value="">
+					<input name="day_feeling_post" id="day_feeling" type="text" value="">
+					<input name="first_thing_post" id="first_thing" type="text" value="">
+					<input name="second_thing_post" id="second_thing" type="text" value="">
+					<input name="third_thing_post" id="third_thing" type="text" value="">
+					<input name="first_reason_post" id="first_reason" type="text" value="">
+					<input name="second_reason_post" id="second_reason" type="text" value="">
+					<input name="third_reason_post" id="third_reason" type="text" value="">
+					</div>
+					
+					
+						<center style="padding-bottom : 10px;"><a onclick="save()" href="javascript:history.back()"  id="download-button" class="btn-large waves-effect waves-light orange">Back</a></center>
+        				<center><div class="animated infinite pulse"><input type="submit" value="Yes"  onclick ="update_status()" class="btn-large waves-effect waves-light orange" ></div></center>
+    				
+    			</form>
+    	
+      	
+      	
+      	</div>
+      </div>
+     
+       
+
+    </div>
+  </div>
+  
+  <script>
+  		function update_status()
+  		{
+  		document.getElementById("status").innerHTML  = "Submitting";
+    	}
+    	
+    	document.getElementById("lastnight_dream").value = localStorage.getItem("lastnight_dream_answer");
+    	document.getElementById("dream_feeling").value = localStorage.getItem("dream_feeling_answer");
+    	document.getElementById("day_feeling").value = localStorage.getItem("day_feeling_answer");
+    	document.getElementById("dream_feeling").value = localStorage.getItem("dream_feeling_answer");
+    	document.getElementById("first_thing").value = localStorage.getItem("first_thing_answer");
+    	document.getElementById("second_thing").value = localStorage.getItem("second_thing_answer");
+    	document.getElementById("third_thing").value = localStorage.getItem("third_thing_answer");
+    	document.getElementById("first_reason").value = localStorage.getItem("first_reason_answer");
+    	document.getElementById("second_reason").value = localStorage.getItem("second_reason_answer");
+    	document.getElementById("third_reason").value = localStorage.getItem("third_reason_answer");
+    	
+    	
+    	function erase_answer()
+    	{
+    		localStorage.setItem("lastnight_dream_answer","");
+    		localStorage.setItem("dream_feeling_answer","");
+    		localStorage.setItem("day_feeling_answer","");
+    		localStorage.setItem("dream_feeling_answer","");
+    		localStorage.setItem("first_thing_answer","");
+    		localStorage.setItem("second_thing_answer","");
+    		localStorage.setItem("third_thing_answer","");
+    		localStorage.setItem("first_reason_answer","");
+    		localStorage.setItem("second_reason_answer","");
+    		localStorage.setItem("third_reason_answer","");
+    	}
+    </script>
+</body>
+    
+
+  </html>
+  
+  
+  
+  
